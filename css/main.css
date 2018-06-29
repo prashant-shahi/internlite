@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/*[ BACK TO TOP ]
+///////////////////////////////////////////////////////////
+*/
+.btn-back-to-top {
+	display: none;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	bottom: 20px;
+	right: 20px;
+	background-color: black;
+	opacity: 0.5;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	z-index: 1000;
+	border-radius: 4px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+}
+.symbol-btn-back-to-top {
+	font-size: 22px;
+	color: white;
+	line-height: 1em;
+}
+.btn-back-to-top:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+/*[ Error-Success ]
+///////////////////////////////////////////////////////////
+*/
+.alert {
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+.alert.success {background-color: #4CAF50;}
+.alert.warning {background-color: #ff9800;}
+.alert.failure {background-color: #f44336; }
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
