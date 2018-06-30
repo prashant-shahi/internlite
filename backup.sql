@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: internlite
 -- ------------------------------------------------------
--- Server version	5.7.22-0ubuntu18.04.1
+-- Server version	5.7.22-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,7 +29,7 @@ CREATE TABLE `employers` (
   `password` varchar(36) NOT NULL,
   `saltstring` varchar(36) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `employers` (
 
 LOCK TABLES `employers` WRITE;
 /*!40000 ALTER TABLE `employers` DISABLE KEYS */;
+INSERT INTO `employers` VALUES (1,'ABC','abc@gmail.com','b64020cb98fb8c47af5b3ca3a34332e8','fJakOB3ZePtPqLjRrwS8'),(2,'XYZ','xyz@gmail.com','feadcb720aa5364fdf096335a0664bc0','KOKYA7kbLcT0V3lKFpJT');
 /*!40000 ALTER TABLE `employers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +86,7 @@ CREATE TABLE `internships` (
   PRIMARY KEY (`id`),
   KEY `employerid` (`employerid`),
   CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`employerid`) REFERENCES `employers` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,6 +95,7 @@ CREATE TABLE `internships` (
 
 LOCK TABLES `internships` WRITE;
 /*!40000 ALTER TABLE `internships` DISABLE KEYS */;
+INSERT INTO `internships` VALUES (1,1,'FULL STACK/MEAN STACK Developer - should have done some projects in the same field.','2018-06-29 10:30:02'),(2,1,'Software Development  : working on Algorithm, Data Structures and should have problem solving skills','2018-06-29 11:03:07'),(3,2,'Python/Django : RESPFUL API using DJango and Python, Knowledge of FLASK is plus points','2018-06-29 11:05:08'),(4,2,'Python/UI/UX Design : Frontend development skills and Photoship skills','2018-06-29 11:06:55'),(5,2,'Mobile App Development\r\nSkill(s) required: Objective C, SQLite, Swift, REST API, iOS and Database Management System (DBMS)','2018-06-29 10:38:43');
 /*!40000 ALTER TABLE `internships` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +113,7 @@ CREATE TABLE `students` (
   `password` varchar(36) NOT NULL,
   `saltstring` varchar(36) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,6 +122,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
+INSERT INTO `students` VALUES (1,'Student','student@gmail.com','029f968f17edb19c7065ca59018d2ec2','5EPVNN47NDIGGvbxFzBk');
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -132,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-29  3:37:16
+-- Dump completed on 2018-06-30 10:28:58

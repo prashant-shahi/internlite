@@ -1,7 +1,7 @@
 <?php
 	$servername = 'localhost';
-	$username = 'root';
-	$password = 'Password123$_$';
+	$username = '';
+	$password = '';
 	$database = 'internlite';
 
 	// Create connection
